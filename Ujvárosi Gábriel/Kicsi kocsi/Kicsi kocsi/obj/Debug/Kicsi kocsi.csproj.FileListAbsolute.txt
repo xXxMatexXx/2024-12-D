@@ -1,0 +1,7 @@
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\bin\Debug\Kicsi kocsi.exe.config
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\bin\Debug\Kicsi kocsi.exe
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\bin\Debug\Kicsi kocsi.pdb
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\obj\Debug\Kicsi kocsi.csproj.AssemblyReference.cache
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\obj\Debug\Kicsi kocsi.csproj.CoreCompileInputs.cache
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\obj\Debug\Kicsi kocsi.exe
+C:\Users\UivarosiGabriel\source\repos\Kicsi kocsi\Kicsi kocsi\obj\Debug\Kicsi kocsi.pdb

@@ -1,0 +1,60 @@
+Teszteléshez ismerni kell a functional requirements.
+													     V------------------------------------------|
+Felhasználó --------------------> Üzleti elemző -----> Solution Architect ---------> System Analyst -----> Coder --> Tester---> Release Manager ---> Ügyfél
+	|   funkcionális igények				HLD			LLD		     |
+	|												     |----->
+	V
+Megrenderlő
+
+Verifikációs tesztelés (hibatesztelés)
+- Tesztek a rendszerhibák feltárására
+- A jó teszt feltárja a rendszerben lévő hibák jelenlétét: Program és specifikáció közötti ellentmondás
+
+Validációs tesztelés
+- Célja annak bizonyitása, hogy a szoftver megfelel a megrendelő igényeinek.
+- A jó teszt megmutatja, hogy a rendszer teljesítménye és megbízhatósága valós körülmények között is megfelelő-e.
+
+Hibatesztelés
+- Programhibák jelentlétének fetárása
+
+Hibakeresés
+- Hibák lokalizása és javítása
+
+Teszt dokumentumentáció
+A tesztelők kapják meg
+Lehet online felület
+
+A hibakeresés során a program viselkedéséről hipotéziseket állitunk fel
+- Túlcímzések, nullával osztás, végtelen ciklusok, stb.
+
+A komponen tesztelés az egyes komponensek izolált tesztelésének folyamata.
+
+Jellemzően white-box tesztelés
+
+Komponensek lehetnek
+- Egyedi függvények vagy objektumok metódusai
+- Objektum osztályok sok attribútummal és metódussal
+- Kompozit komponensek, amelyek szolgáltatásait interfészeken keresztül lehet elérni
+
+Egy modularitás szempont szerint jól megírt szoftver forráskód teszteléles nem jelent mást mint a metódusok tesztelését.
+
+Monolith programozás, Spagetthi code vs Moduláris programozás
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

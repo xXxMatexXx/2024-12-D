@@ -1,0 +1,85 @@
+Egyszerü:
+-Sorozatszámítás / összegzés
+-Eldöntés
+-Kiválasztás
+-Lineáris Keresés
+-Megszámlálás
+-Max/minimumkiválasztás
+
+- Sorozatszámítás/összegzés Pszeudokód:
+ - Bemenet: x - T tömb, n - egész szám(tömb mérete)
+ - Kimenet: érték - T 
+- Fügvény Sorozatszámitás(x,n)
+	- érték <- értékˇ0
+	- ciklus i <- 1-t n-ig
+	- érték <- érték + x [i]
+	- vissza érték
+  - függvény vége
+ x : |3|6|1|8|4|
+ érték : 0 
+
+- Eldöntés:
+ - Bemenet: x - T tömb, n - egész szám, P-logikai(tulajdonság)
+ - Kimenet: van - logikai
+- Függvény döntés (x,n,P)
+   i <- 1
+   ciklus amig(i <= n) A -> P (x[i])
+       i <- i + 1
+   ciklus vége 
+   van <- (i <= n)
+   vissza van
+függvény vége
+x : |3|7|1|4|5|8|
+	   ^
+van = igaz
+
+- Kiválasztás:
+ - Bemenet: x - T tömb, n - egész szám, P-logikai(tulajdonság)
+ - Kimenet: index - egész
+- Függvény kiválasztás (x,n,P)
+   i <- 1
+   ciklus amig(i <= n) A -> P (x[i])
+       i <- i + 1
+   ciklus vége 
+   idx <- 1
+   vissza index
+függvény vége
+
+- Lineaáris keresés:
+ - Bemenet: x - T tömb, n - egész szám, P-logikai
+ - Kimenet: index - egész, van - logikai
+- Függvény Lineáris keresés(x,n,P)
+   i <- 1
+   ciklus amíg(i <= n) A ] P(x[i])
+       i <- i + 1
+   ciklus vége
+   van <- (1 <= n)
+   ha van akkor
+      index <- i
+      vissza(van, index)
+   különben 
+     vissza van
+   elágazás vége
+   függvény vége
+
+- Megszámlálás
+ - Bemenet: x - T tömb, n - egész szám, P - logikai
+ - Kimenet: darab - egész
+- Függvény Megszámlálás(x,n,p)
+  darab <- 0
+  ciklus i <- t-től n-ig
+    ha P(x[i]) akkor
+      darab <- darab + 1
+    elágazés vége
+  ciklus vége
+  vissza darab
+függvény vége
+x = |3|6|1|8|4|
+     ^
+     i
+
+darab: 0
+
+
+
+Komplex:

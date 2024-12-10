@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Document</title>
+</head>
+<body style="background: linear-gradient(to top, #64ed4c, #86fe7b);">
+
+    <div id="app">
+        <h2>Felhasználói adatok:</h2>
+        
+        <!-- Greeting component -->
+        <greeting-component :message="greetingMessage"></greeting-component>
+        <button @click="changeMessage">Üzenet változtatás</button>
+
+        <!-- Név és kor beviteli mezők -->
+        <label for="name">Név:</label>
+        <input v-model="name" type="text" id="name" placeholder="Add meg a neved">                                                      
+        <label for="age">Kor:</label>
+        <input v-model="age" type="text" id="age" placeholder="Add meg a korod">
+
+        <p><strong>Név:</strong> {{name}}</p>
+        <p><strong>Kor:</strong> {{age}}</p>
+
+        <p>{{ ageStatus }}</p>
+
+        <!-- Felnőtt vagy kiskorú státusz megjelenítése -->
+        <div v-if="age > 18">
+            <p>Gratulálok, felnőtt vagy, szavazhatsz és vezethetsz autót!</p>
+        </div>
+
+        <h3>Kedvenc Hobbik:</h3>
+        <ul>
+            <li v-for="(hobby, index) in hobbies" :key="index">{{ hobby }}</li>
+        </ul>
+    </div>
+
+    <script>
+        // Greeting Component
+        Vue.component('greeting-component', {
+            props: ['message'], 
+            template: '<h1>{{ message }}</h1>'
+        });
+
+        // Vue példány inicializálása
+        new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                age: '',
+                greetingMessage: 'Üdvözlet a Vue.js világába!',
+                hobbies: ['Futás', 'Olvasás', 'Kerékpározás']
+            },
+            computed: {
+                ageStatus() {
+                    if (this.age < 0) {
+                        return 'Az életkor nem lehet negatív!';
+                    } else if (this.age === 0) {
+                        return 'Az életkor nem lehet nulla!';
+                    } else if (this.age >= 18) {
+                        return 'Felnőtt';
+                    } else if (this.age > 0) {
+                        return 'Kiskorú';
+                    } else {
+                        return '';
+                    }
+                }
+            },
+            methods: {
+                changeMessage() {
+                    this.greetingMessage = 'Az üzenet megváltozott!';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

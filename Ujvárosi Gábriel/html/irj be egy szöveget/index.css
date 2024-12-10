@@ -1,0 +1,94 @@
+
+.a_DOBOZ{
+    width: 350px;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+    margin-top: 330px;
+    background-color: yellow;
+    
+    
+    
+
+}
+.kekbal {
+    height: 100vh;
+    width: 50vh;
+    background-image: url(./Cuki_Cicás_KÉP\(1\).png);
+    background-color: darkblue;
+    color: darkblue;
+    float: left;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+.kekjobb {
+    height: 100vh;
+    width: 50vh;
+    background-image: url(./Cuki_Cicás_KÉP\(1\).png);
+    background-color: darkblue;
+    color: darkblue;
+    float: right;
+    margin: auto;
+    margin-top: -410px;
+    margin-bottom: 0px;
+}
+
+#body{
+ margin: auto;
+ justify-content: center;
+ background-color: yellow;
+
+}
+#form{
+    margin: auto;
+    justify-items: center;
+    
+}
+
+label {
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+h2 {
+    margin: auto;
+}
+
+input {
+    margin: auto;
+    margin-left: 80px;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+
+}
+
+button {
+    margin: auto;
+    text-align: center;
+    justify-self: center;
+    margin-left: 125px;
+    background-color: green;
+}
+
+.fej {
+    background-color: crimson;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.fej .fekete{
+    color: black;
+}
+.leg {
+    color: white;
+    background-color: black;
+    margin-top: 36vh;
+    width: 250vh;
+    text-align: center;
+    height: 5vh;
+}

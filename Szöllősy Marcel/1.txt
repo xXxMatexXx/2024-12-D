@@ -1,0 +1,20 @@
+Forráskód -----  Script nyelvek   ---------------------------> CPU
+	         Forditott nyelvek
+
+A moduláris programozás célja hogy olyn forráskód állomány létrehozása, amelyek logikusnak, atláthatónak, konnyen fejleszthető, könnyen hibekezelhető kód létrehozása
+
+Az a jó kód ami le van dokumentálva
+
+Script nyelv
+
+print("Hello world") Interpreter elolvassa - bytkodot - elküldi az oprendszer
+- gépi kód
+
+A forditott nyelveknél teljes forráskód állomány kielemezésre kerül a forditó által.
+
+A C# erősen tipusos nyelv és forditott nyelv.
+
+Amikor programzunk egy magas szintü program nyelvben programozunk akkor konkrétan az operációs rendszert programozuk.
+
+A felhasznói programok végtelen ciklusban futnak.
+

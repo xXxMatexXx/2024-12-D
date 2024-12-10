@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vue.js és Bootstrap Példa</title>
+
+
+
+
+<!-- Bootstrap CDN -->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<!-- Vue.js CDN -->
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+
+
+
+<style>
+
+body {
+
+min-height: 100vh;
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+
+
+
+header, footer {
+
+background-color: #90ee90;
+
+text-align: center;
+
+padding: 20px;
+
+}
+
+
+
+
+main {
+
+flex-grow: 1;
+
+display: flex;
+
+justify-content: space-around;
+
+align-items: center;
+
+}
+
+
+
+
+.column {
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+
+
+
+.box {
+
+border: 2px solid #000;
+
+width: 200px;
+
+height: 200px;
+
+margin-bottom: 20px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- Header -->
+<header>
+
+<h1>Header - Világoszöld</h1>
+
+</header>
+<!-- Main content with Vue.js -->
+<main id="app">
+
+<div class="container-fluid">
+
+<div class="row">
+
+<!-- Column 1 -->
+<div class="col-md-4 column">
+<!-- ez itt a kockánk minek megajduk a stílusát így mely segít abban hogy JSben elérd -->
+    <div class="box" :style="[ box1shape, { backgroundColor: box1color }]">
+        <!-- a szöveg amelyik abban segít, hogy  -->
+        {{box1text}}
+    </div>
+    <!-- ezzel igazítjuk középre ezt a 3 gombot -->
+    <div class="d-flex justify-content-between w-50">
+        <!-- gombok mikhez hozzá írjuk azt hogyha rákkattintasz hív egy JS függvényt -->
+        <button class="btn btn-dark" @click="clickHandler(1)">Word</button>
+        <button class="btn btn-dark" @click="clickDelete(1)">Delete</button>
+        <button class="btn btn-primary" @click="clickColor(1, 'red')">Red</button>
+    </div>
+    <!-- ezzel igazítjuk középre ezt a 2 gombot -->
+    <div class="d-flex justify-content-between w-50 mt-2">
+        <!-- gombok mikhez hozzá írjuk azt hogyha rákkattintasz hív egy JS függvényt -->
+        <button class="btn btn-dark" @click="clickShape(1)">Rounded</button>
+        <button class="btn btn-dark" @click="clickUndo(1)">Undo</button>
+    </div>
+</div>
+
+<!-- Column 2 -->
+<div class="col-md-4 column">
+<div class="box" :style="[ box2shape, { backgroundColor: box2color }]">
+{{box2text}}
+</div>
+<div class="d-flex justify-content-between w-50">
+    <button class="btn btn-dark" @click="clickHandler(2)">Word</button>
+    <button class="btn btn-dark" @click="clickDelete(2)">Delete</button>
+    <button class="btn btn-danger" @click="clickColor(2, 'green')">Green</button>
+</div>
+<!-- ezzel igazítjuk középre ezt a 2 gombot -->
+<div class="d-flex justify-content-between w-50 mt-2">
+    <!-- gombok mikhez hozzá írjuk azt hogyha rákkattintasz hív egy JS függvényt -->
+    <button class="btn btn-dark" @click="clickShape(2)">Bold</button>
+    <button class="btn btn-dark" @click="clickUndo(2)">Undo</button>
+</div>
+</div>
+
+<!-- Column 3 -->
+<div class="col-md-4 column">
+<div class="box" :style="[ box3shape, { backgroundColor: box3color }]">
+{{box3text}}
+</div>
+<div class="d-flex justify-content-between w-50">
+    <button class="btn btn-dark" @click="clickHandler(3)">Word</button>
+    <button class="btn btn-dark" @click="clickDelete(3)">Delete</button>
+    <button class="btn btn-success" @click="clickColor(3, 'blue')">Blue</button>
+</div>
+<!-- ezzel igazítjuk középre ezt a 2 gombot -->
+<div class="d-flex justify-content-between w-50 mt-2">
+    <!-- gombok mikhez hozzá írjuk azt hogyha rákkattintasz hív egy JS függvényt -->
+    <button class="btn btn-dark" @click="clickShape(3)">Circle</button>
+    <button class="btn btn-dark" @click="clickUndo(3)">Undo</button>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+
+
+
+
+<!-- Footer -->
+<footer>
+<h2>Footer - Világoszöld</h2>
+</footer>
+
+<!-- Vue.js script -->
+<script>
+
+new Vue({
+
+el: '#app',
+data:{
+    box1text: '',
+    box2text: '',
+    box3text: '',
+    box1color: '',
+    box2color: '',
+    box3color: '',
+    box1shape: {
+        borderRadius: '0',
+        borderWidth: '2px'
+    },
+    box2shape: {
+        borderRadius: '0',
+        borderWidth: '2px'
+    },
+    box3shape: {
+        borderRadius: '0',
+        borderWidth: '2px'
+    },
+},
+
+methods: {
+
+clickHandler(buttonNumber) {
+
+//gomb alapján módosítjuk a megfelelő box szövegét
+    if (buttonNumber === 1){
+        this.box1text = 'Gomb 1 megnyomva!';
+    } else if (buttonNumber === 2){
+        this.box2text = 'Gomb 2 megnyomva!';
+    } else if (buttonNumber === 3){
+        this.box3text = 'Gomb 3 megnyomva!';
+    }
+},
+
+clickDelete(buttonNumber) {
+
+    //gomb alapján töröljük a megfelelő box szövegét
+    if (buttonNumber === 1){
+        this.box1text = null;
+    } else if (buttonNumber === 2){
+        this.box2text = null;
+    } else if (buttonNumber === 3){
+        this.box3text = null;
+    }
+},
+
+clickColor(buttonNumber, color) {
+//gomb alapján módosítjuk a megfelelő box színét
+    if (buttonNumber === 1){
+        this.box1color = color;
+    } else if (buttonNumber === 2){
+        this.box2color = color;
+    } else if (buttonNumber === 3){
+        this.box3color = color;
+    }
+},
+clickShape(buttonNumber) {
+//gomb alapján módosítjuk a megfelelő box formáját
+    if (buttonNumber === 1){
+        this.box1shape.borderRadius = '15px';
+    } else if (buttonNumber === 2){
+        this.box2shape.borderWidth = '5px';
+    } else if (buttonNumber === 3){
+        this.box3shape.borderRadius = '50%';
+    }
+},
+clickUndo(buttonNumber) {
+//gomb alapján visszaállítjuk a megfelelő box formáját
+    if (buttonNumber === 1){
+        this.box1shape.borderRadius = '0';
+        this.box1shape.borderWidth = '2px';
+    } else if (buttonNumber === 2){
+        this.box2shape.borderRadius = '0';
+        this.box2shape.borderWidth = '2px';
+    } else if (buttonNumber === 3){
+        this.box3shape.borderRadius = '0';
+        this.box3shape.borderWidth = '2px';
+    }
+}
+}
+});
+</script>
+
+<!-- Bootstrap JS és jQuery CDN-ek -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

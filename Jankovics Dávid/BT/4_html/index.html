@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content:  center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            border: 2px solid #000;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-container input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-container button{
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // showMessage függvény, ami üzenetet jelenyít, meg meg a konzól
+        function showMessage(message) {
+            console.log(message)
+        }
+        //form létrehozása
+
+        const formContainer = document.createElement('div');
+        formContainer.className = 'form-container';
+
+        const form = document.createElement('input');
+        form.id = 'myForm';
+        
+        // Öt textfield hozzáadása
+
+        for(let i = 1; i <= 5; i++) {
+            const input = document.createElement('input')
+        
+        input.type = 'text';
+        input.name = 'field';
+        input.placeholder = 'Mező' + i;
+        
+        input.addEventListener('input', function () {
+            showMessage(`Mező ${i}: ${this.value}`);
+        });
+
+        form.appendChild(input);
+}
+        //Gomb létrehozása
+
+        const button = document.createElement('button');
+        button.type = 'submit';
+        button.textContent = 'Elküld';
+
+        // Eseménykezelő a gomb megnyomásához
+
+        button.addEventListener('click', function () {
+            showMessage('Elküld gomb megnyomva');
+        });
+
+        //Eseménykezelő a form elküldéséhez
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new formData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+
+            });
+            
+            // Adatok json formában
+            const jsonData = JSON.stringify(data);
+            showMessage(`Form adatok: ${jsonData}`);
+
+
+        });
+
+        form.appendChild(button);
+        formContainer.appendChild(form);
+        document.body.appendChild(formContainer);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js és Bootstrap Példa</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background-color: #90ee90;
+      text-align: center;
+      padding: 20px;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box {
+      border: 2px solid #000;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Header - Világoszöld</h1>
+  </header>
+
+  <!-- Main content with Vue.js -->
+  <main id="app">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-4 column">
+          <div class="box">
+            {{ box1Text }}
+          </div>
+          <div class="d-flex justify-content-between w-100">
+            <button class="btn btn-primary" @click="clickHandler(1)">Gomb 1</button>  
+            <button class="btn btn-secondary" @click="Erasure(1)">Delete</button>
+          </div>
+        </div>
+
+    <!--d-flex: A d-flex osztály flexbox konténerré alakítja a szülő elemet, amelyben a gombok vannak, 
+                         így a gombok alapértelmezés szerint egymás mellett jelennek meg.
+        justify-content-between: Ez az osztály biztosítja, hogy a két gomb között legyen egyenletes térköz, 
+                        az egyik gomb a bal oldalon, a másik pedig a jobb oldalon helyezkedik el. Ha közvetlenül egymás mellé szeretnéd őket, 
+                        használhatod a justify-content-start-ot, amely az elemeket a bal oldalra igazítja.
+        w-100: Ez az osztály a div szélességét 100%-ra állítja, így a gombok az egész oszlopot kihasználhatják.-->
+
+        <!-- Column 2 -->
+        <div class="col-md-4 column">
+          <div class="box">
+            {{ box2Text }}
+          </div>
+          <div class="d-flex justify-content-start">
+            <button class="btn btn-primary" @click="clickHandler(2)">Gomb 2</button>  
+            <button class="btn btn-secondary" @click="Erasure(2)">Delete</button>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4 column">
+          <div class="box">
+            {{ box3Text }}
+          </div>
+          <div class="d-flex justify-content-between w-50">
+            <button class="btn btn-primary" @click="clickHandler(3)">Gomb 3</button>  
+            <button class="btn btn-secondary" @click="Erasure(3)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Footer - Világoszöld</h2>
+  </footer>
+
+  <!-- Vue.js script -->
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        box1Text: '', // Üres kezdeti értékek
+        box2Text: '',
+        box3Text: ''
+      },
+      methods: {
+        clickHandler(buttonNumber) {
+          // A gomb alapján módosítjuk a megfelelő box szövegét
+          if (buttonNumber === 1) {
+            this.box1Text = 'Gomb 1 megnyomva!';
+          } else if (buttonNumber === 2) {
+            this.box2Text = 'Gomb 2 megnyomva!';
+          } else if (buttonNumber === 3) {
+            this.box3Text = 'Gomb 3 megnyomva!';
+          }
+        },
+        Erasure(buttonNumber){
+            if (buttonNumber === 1) {
+            this.box1Text = '';
+          } else if (buttonNumber === 2) {
+            this.box2Text = '';
+          } else if (buttonNumber === 3) {
+            this.box3Text = '';
+          }
+            
+        }
+
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS és jQuery CDN-ek -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

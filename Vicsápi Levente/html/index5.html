@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2 style="font-size: 2rem; font-weight: bolder;"> Felhasználói adatok</h2>
+
+        <!-- Név input mező -->
+        <label for="name">Név: </label>
+        <input v-model="name" type="text" id="name" placeholder="Add meg a neved">
+
+        <!-- Kor input mező -->
+        <label for="age">Kor: </label>
+        <input v-model="age" type="number" id="age" placeholder="Add meg a korod">
+
+        <!-- Adatok megjelenítése -->
+        <p><strong>Név: {{ name }}</strong></p>
+        <p><strong>Kor: {{ age }}</strong></p>
+
+        <!-- Automatikusan számított tulajdonság -->
+        <p><strong>{{ ageStatus }}</strong></p>
+
+        <!-- Plusz feltételes megjelenítés v-if használatával -->
+        <div v-if="age >= 18">
+            <p>Gratulálok, felnőtt vagy, szavazhatsz és vezethetsz autót</p>
+        </div>
+
+        <greeting-component :message="greetingsMessage" style="text-align: center;"></greeting-component>
+        <button @click="changeMessage">Üzenet változtatása</button>
+
+    </div>
+
+    <script>
+        // Gyermek komponens létrehozása
+        Vue.component('greeting-component', {
+            props: ['message'], // a prop-on keresztül átadott adat fogadása
+            template: '<h1>{{ message }}</h1>' // a message változó megjelenítése
+        })
+
+        // Szülő komponens létrehozása(a Vue instance)
+        new Vue({
+            el:'#app',
+            data: {
+                name: '',
+                age: '',
+                greetingsMessage: 'Üdvözlet a Vue.js világában!'
+            },
+
+            computed:{
+                ageStatus(){
+                    if(this.age < 0){
+                        return 'az életkor nem lehet negatív';
+                    }else if(this.age === 0){
+                        return 'aze életkor nem lehet nulla';
+                    } else if(this.age >=18){
+                        return 'felnőtt';
+                    } else if(this.age > 0){
+                        return 'kiskorú'
+                    } else{
+                        return '';
+                    }
+                }
+            },
+
+            methods:{
+                changeMessage(){
+                    this.greetingsMessage = 'Üzenet megváltozott!'
+                }
+            }
+        });
+
+    </script>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #app{
+            border: 0.4vh solid black;
+            padding: 2vh;
+            display: flex;
+            flex-direction: column;
+            min-width: 388px;
+            min-height: 396px;
+            border-radius: 1vh;
+        }
+
+        button{
+            background-color: green;
+            border: 0.4vh solid black;
+            color: white;
+            border-radius: 1vh;
+        }
+
+        input{
+            border-radius: 1vh;
+            border: 0.3vh solid black;
+            height: 3vh;
+        }
+    </style>
+
+</body>
+</html>

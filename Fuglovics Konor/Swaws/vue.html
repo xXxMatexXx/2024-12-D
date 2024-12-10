@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js User Card</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .user-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .user-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .user-card h3 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+    .user-card p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+    .user-card p:nth-child(5) {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div id="app">
+    <user-card :name="userName" :email="userEmail" :age="userAge" :location="userLocation" :bio="userBio" :profilePicture="userProfilePicture"></user-card>
+  </div>
+  <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+ 
+  <script>
+
+    // Gyermek komponens létrehozása-------------------------------------------------------------------------------------------------------------------------
+
+    Vue.component('user-card', {
+      props: ['name', 'email', 'age', 'location', 'bio', 'profilePicture'],
+      template: `
+        <div class="user-card">
+          <img :src="profilePicture" alt="Profile Picture">
+          <h3>{{ name }}</h3>
+          <p><strong>Email:</strong> {{ email }}</p>
+          <p><strong>Age:</strong> {{ age }}</p>
+          <p><strong>Location:</strong> {{ location }}</p>
+          <p>"{{ bio }}"</p>
+        </div>
+      `
+    });
+
+    Vue.component('user-profile',
+	{
+		template: `
+			<user-card
+				:name="userData.name"
+				:email="userData.email"
+				:age="userData.age"
+				:location="userData.location"
+				:bio="userData.bio"
+				:profilePicture="userData.profilePicture">
+			</user-card>
+		`,
+		data()
+		{
+			return
+			{
+				userData:
+				{
+					name: 'Fuglovics Konor',
+					email: 'konor.fuggi@gmail.com',
+					age: 19,
+					location: 'Káposztásmegyer, Budapest',
+					bio: 'I like being silly on the Internet! :3',
+				}
+			}
+		}
+	}
+
+
+    // Fő Vue instance-----------------------------------------------------------------------------------------------------------------------------------------
+
+    new Vue({
+      el: '#app',
+      data: {
+        userName: 'Jane Doe',
+        userEmail: 'Jane Doe@gmail.com',
+        userAge: 29,
+        userLocation: 'New York, USA',
+        userBio: 'I love coding, coffee, and long walks in the park.',
+        userProfilePicture: 'https://via.placeholder.com/100'
+      }
+    });
+    
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+  </script>
+</body>
+</html>

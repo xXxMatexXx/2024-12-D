@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-container{
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-container input{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-container button{
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    //üzenet mutatása funkció
+    function showMessage(message){
+        console.log(message);
+    }
+
+    //formot létrehozunk
+    const formContainer = document.createElement('div');
+    formContainer.className = 'form-container';
+
+    const form = document.createElement('form');
+    form.id = 'myForm';
+
+    //ötször létrehozunk egy input fieldet
+    for (let i = 1; i <= 5; i++)
+    {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'field' + i;
+        input.placeholder = 'Mező ' + i;
+
+        //egy eseménykezelőt adunk hozzájuk
+        input.addEventListener('input', function(){
+            showMessage(`Mező ${i}: ${this.value}`)
+        })
+
+        form.appendChild(input);
+    }
+
+    //gomb létrehozás
+    const button = document.createElement('button');
+    button.type = 'submit';
+    button.textContent = 'elküld';
+
+    //gomb megnyomásához eseménykezelő
+    button.addEventListener('click', function(event){
+        showMessage('elküld gomb megnyomva');
+    })
+
+    //eseménykezelő a from elküldéséhez
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const data = {}
+
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        //adatok JSON formában
+        const jsonData = JSON.stringify(data);
+        showMessage(`Form adatok: ${jsonData}`)
+    })
+
+    form.appendChild(button);
+    formContainer.appendChild(form);
+    document.body.appendChild(formContainer);
+
+</script>
+</html>

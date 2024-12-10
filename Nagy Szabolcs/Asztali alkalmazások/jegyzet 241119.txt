@@ -1,0 +1,58 @@
+Programozási tételek: 
+6 egyszerű, 6 összetett
+
+egyszerűek:
+ 1. Sorozatszmítás / összegés
+ 2. Eldöntés
+ 3. Kiválasztás
+ 4. lineáris keresés
+ 5. Megszámláls
+ 6. Min/maximum kiválasztás
+
+ Sorozatszámítás: pseudo-kód - algoritmus ami minden programnyelvben ugyan az.
+Bemenet : x - Tömb , n - egész (tömb mérete)
+Kimenet: érték - T
+ függvény Sorozatszmítás (x , n)
+	érték <- érték = 0
+	ciklus i <- 1-től n -ig
+		érték <- érték + x [i]
+	--ciklus vége--
+	vissza érték 
+--függvény vége--
+
+ x: [ 3 | 6 | 1 | 8 | 4 ]
+ érték : 0 , egyesével bejárja a tömböt, az értékhez hozzáadja az i elemet, frissül az érték, n+1, repeats tömb végéig
+return érték
+	
+Eldöntés: ture or false
+
+Bemenet: x - T tömb, n- egész (tömb mérete), P - logikai érték (tulajdonság)
+Kimenet: van - logikai érték.
+ pseudo: 
+függvény eldtöntés ( x , n , P)
+i <- 1 
+ciklus amig (while) (i =< n) 1 & P(x [i])
+	i <- i+ 1 (inkrementálás)
+	ciklus vége 
+van <- (i =< n)
+vissza van 
+függvény vége 
+
+x: [ 3 | 7 | 1 | 4 | 5 | 8 ] 
+     ^
+     i
+VAN = Igaz
+return van
+
+Kiválasztás - feltételezzük hogy fix van legalább 1 darab
+visszaadja az első P tulajdonsgú elem sorszámát/indexét
+
+függvény kiválasztás ( x , n , P)
+i <- 1 
+ciklus amig (while) (i =< n) 1 & P(x [i])
+	i <- i+ 1 (inkrementálás)
+	ciklus vége 
+ idx <- i
+vissza index
+függvény vége 
+

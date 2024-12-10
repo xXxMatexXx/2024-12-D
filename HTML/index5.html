@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vue.js - Props és Gombnyomás Példa</title>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: linear-gradient(to right, #64b3f4, #c2e59c);
+
+padding: 20px;
+
+}
+
+.component-box {
+
+border: 2px solid #fff;
+
+padding: 15px;
+
+margin-bottom: 20px;
+
+background: #e6f7ff;
+
+border-radius: 10px;
+
+}
+
+h2 {
+
+color: #024e76;
+
+}
+
+button {
+
+padding: 10px;
+
+margin-top: 10px;
+
+background: #007bff;
+
+color: #fff;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+
+button:hover {
+
+background: #0056b3;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="app">
+
+        <div class="component-box">
+            <h2>Props bemutató</h2>
+            <props-demo : message="message" :subtitle="subtitle"></props-demo>
+            <button @click="changeMessage">Első szöveg</button>
+            <button @click="changeSubtitle">Második szöveg</button>
+            <button @click="showAdditionalMessage">If megjelenítés</button>
+
+        <div v-if="additionaMessage" class="component-box">
+            <h3>{{ additionaMessage }}</h3>
+        </div>
+    </div>
+<script>
+    // props komponens
+
+    Vue.component('props-demo', {
+    props: ['message'],
+    template: ` 
+    <div>
+        <h3>{{ message }}</h3>
+        <p>{{ subtitle }}</p>
+        </div>
+    `});
+
+
+
+
+// Szülő Vue instance
+
+new Vue({
+    el: '#app',
+    data: {
+        message: 'Ez az alapértelmezett üzenet',
+        subtitle: ''
+    },
+    methods: {
+        changeMessage() {
+            this.message = 'Ez az új üzenet gombnyomás után!';
+        },
+        changeSubtitle() {
+            this.subtitle = 'Ez az új alcím gombnyomás után!';
+        }
+    }
+    });
+    </script>
+</body>
+</html>

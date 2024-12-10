@@ -1,0 +1,7 @@
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.AssemblyReference.cache
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+C:\osztály_github\Vicsápi Levente\C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

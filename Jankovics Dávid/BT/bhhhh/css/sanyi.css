@@ -1,0 +1,49 @@
+header{
+    border: 2px solid black;
+    width: auto;
+    height: auto ;
+    margin-bottom: 4px ;
+
+}
+
+nav{
+    border: 2px solid black;
+    width: auto;
+    height: auto ;
+    margin-bottom: 4px ;
+
+}
+
+section{
+    border: 2px solid black;
+    width: auto;
+    height: auto ;
+    margin-bottom: 4px ;
+
+}
+
+article{
+    border: 2px solid black;
+    width: auto;
+    height: auto ;
+    margin-bottom: 4px ;
+
+}
+
+aside{
+    border: 2px solid black;
+    width: auto;
+    height: auto ;
+    margin-bottom: 4px ;
+
+}
+
+footer{
+    border: 2px solid black;
+    width: auto;
+    height: auto ;
+    margin-bottom: 4px ;
+    position: absolute ;
+
+}
+

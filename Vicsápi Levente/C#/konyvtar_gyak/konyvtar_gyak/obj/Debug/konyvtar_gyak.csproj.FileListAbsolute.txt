@@ -1,0 +1,7 @@
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\obj\Debug\konyvtar_gyak.csproj.AssemblyReference.cache
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\obj\Debug\konyvtar_gyak.csproj.CoreCompileInputs.cache
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\bin\Debug\konyvtar_gyak.exe.config
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\bin\Debug\konyvtar_gyak.exe
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\bin\Debug\konyvtar_gyak.pdb
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\obj\Debug\konyvtar_gyak.exe
+C:\osztály_github\Vicsápi Levente\C#\konyvtar_gyak\konyvtar_gyak\obj\Debug\konyvtar_gyak.pdb

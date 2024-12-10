@@ -1,0 +1,15 @@
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\bin\Debug\net8.0\Csak.exe
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\bin\Debug\net8.0\Csak.deps.json
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\bin\Debug\net8.0\Csak.runtimeconfig.json
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\bin\Debug\net8.0\Csak.dll
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\bin\Debug\net8.0\Csak.pdb
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.AssemblyInfoInputs.cache
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.AssemblyInfo.cs
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.csproj.CoreCompileInputs.cache
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.sourcelink.json
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.dll
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\refint\Csak.dll
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.pdb
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\Csak.genruntimeconfig.cache
+C:\Users\UivarosiGabriel\Desktop\git\12D\Ujvárosi Gábriel\c#\csak\Csak\Csak\obj\Debug\net8.0\ref\Csak.dll

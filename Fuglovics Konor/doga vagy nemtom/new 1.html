@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<greeting-component :message="greetingMessage"></greeting-component>
+		<h2>Felhasználói adatok</h2>
+		<label for="name">Név:</label>
+		<input  v-model="name" type="text" id="name" placeholder="Insert your name here :3">
+		<label for="age">Életkor:</label>
+		<input v-model="age" type="number" id="age" placeholder="Enter your age :3">
+		<button @click="changeMessage">Adat bekérése</button>
+		
+		<p><strong>Név:</strong>{{ name }}</p>
+		<p><strong>Életkor:</strong>{{ age }}</p>
+		
+		<p>{{ ageStatus }}</p>
+		
+		<div v-if="this.age >= 18">
+			<p>Új lehetőség! Szavazás!</p>
+		</div>
+	<h3>Kedvenc hobbik:</h3>
+	<ul>
+		<li v-for="(hobby, index) in hobbies" :key="index">{{ hobby }}</li>
+	</ul>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

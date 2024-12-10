@@ -1,0 +1,13 @@
+body
+{
+    background-color: green;
+}
+div.window
+{
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+}

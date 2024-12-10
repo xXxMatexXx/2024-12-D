@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Űrlap JSON-be mentéssel és visszaalakítással</title>
+
+<style>
+
+body, html {
+
+height: 100%;
+
+margin: 0;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+.container {
+
+display: flex;
+
+flex-direction: column;
+
+height: 100%;
+
+width: 100%;
+
+}
+
+.section {
+
+flex: 1;
+
+}
+
+.middle-section {
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+.form-container {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+
+width: 300px;
+
+}
+
+input[type="text"] {
+
+padding: 10px;
+
+font-size: 16px;
+
+border: 1px solid #ccc;
+
+border-radius: 4px;
+
+}
+
+button {
+
+padding: 10px;
+
+font-size: 16px;
+
+background-color: #007bff;
+
+color: white;
+
+border: none;
+
+border-radius: 4px;
+
+cursor: pointer;
+
+}
+
+button:hover {
+
+background-color: #0056b3;
+
+}
+
+.output {
+
+margin-top: 20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="section"></div>
+
+<div class="section middle-section">
+
+<div class="form-container">
+
+<input type="text" id="field1" placeholder="Mező 1">
+
+<input type="text" id="field2" placeholder="Mező 2">
+
+<input type="text" id="field3" placeholder="Mező 3">
+
+<input type="text" id="field4" placeholder="Mező 4">
+
+<input type="text" id="field5" placeholder="Mező 5">
+
+<button onclick="collectData()">Mentés</button>
+
+<div class="output" id="output"></div>
+
+<div class="output" id="parsedOutput"></div>
+
+<div class="output" id="objectOutput"></div>
+
+</div>
+
+</div>
+
+<div class="section"></div>
+
+</div>
+
+
+
+
+<script>
+
+function collectData() {
+
+const field1 = document.getElementById('field1').value;
+
+const field2 = document.getElementById('field2').value;
+
+const field3 = document.getElementById('field3').value;
+
+const field4 = document.getElementById('field4').value;
+
+const field5 = document.getElementById('field5').value;
+
+
+
+
+const formData = {
+
+field1: field1,
+
+field2: field2,
+
+field3: field3,
+
+field4: field4,
+
+field5: field5
+
+};
+
+
+
+
+// JSON objektum létrehozása és kiírása
+
+const outputDiv = document.getElementById('output');
+
+const jsonString = JSON.stringify(formData, null, 2);
+
+outputDiv.textContent = `JSON String: ${jsonString}`;
+
+
+
+
+// JSON visszaalakítása objektummá és kiírása
+
+const parsedObject = JSON.parse(jsonString);
+
+const parsedOutputDiv = document.getElementById('parsedOutput');
+
+parsedOutputDiv.textContent = `Visszaalakított objektum: ${JSON.stringify(parsedObject, null, 2)}`;
+
+
+
+
+// Objektum tulajdonságainak kiírása külön-külön
+
+const objectOutputDiv = document.getElementById('objectOutput');
+
+objectOutputDiv.innerHTML = `
+
+Objektum hivatkozások:<br>
+
+Mező 1: ${parsedObject.field1}<br>
+
+Mező 2: ${parsedObject.field2}<br>
+
+Mező 3: ${parsedObject.field3}<br>
+
+Mező 4: ${parsedObject.field4}<br>
+
+Mező 5: ${parsedObject.field5}
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js és Bootstrap Példa</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background-color: #90ee90;
+      text-align: center;
+      padding: 20px;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box {
+      border: 2px solid #000;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Header - Világoszöld</h1>
+  </header>
+
+  <!-- Main content with Vue.js -->
+  <main id="app">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-4 column">
+          <div class="box">
+            <!-- Üres div -->
+          </div>
+          <button class="btn btn-primary" @click="clickHandler(1)">Gomb 1</button>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4 column">
+          <div class="box">
+            <!-- Üres div -->
+          </div>
+          <button class="btn btn-primary" @click="clickHandler(2)">Gomb 2</button>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4 column">
+          <div class="box">
+            <!-- Üres div -->
+          </div>
+          <button class="btn btn-primary" @click="clickHandler(3)">Gomb 3</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Footer - Világoszöld</h2>
+  </footer>
+
+  <!-- Vue.js script -->
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        clickHandler(buttonNumber) {
+          alert(`Gomb ${buttonNumber} megnyomva!`);
+        }
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS és jQuery CDN-ek -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

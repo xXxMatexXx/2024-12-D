@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\ConsoleApp2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{547F356E-FE69-46E1-88DB-854D3DE13649}|ConsoleApp2\\ConsoleApp2.csproj|c:\\users\\meszarosleventenorbe\\oszt\u00E1ly\\12d\\vics\u00E1pi levente\\c#\\consoleapp2\\consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{547F356E-FE69-46E1-88DB-854D3DE13649}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{547F356E-FE69-46E1-88DB-854D3DE13649}|ConsoleApp2\\ConsoleApp2.csproj|c:\\users\\meszarosleventenorbe\\oszt\u00E1ly\\12d\\vics\u00E1pi levente\\c#\\consoleapp2\\consoleapp2\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{547F356E-FE69-46E1-88DB-854D3DE13649}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\ConsoleApp2\\ConsoleApp2\\Car.cs",
+              "RelativeDocumentMoniker": "ConsoleApp2\\Car.cs",
+              "ToolTip": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\ConsoleApp2\\ConsoleApp2\\Car.cs",
+              "RelativeToolTip": "ConsoleApp2\\Car.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T06:31:19.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\ConsoleApp2\\ConsoleApp2\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
+              "ToolTip": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\ConsoleApp2\\ConsoleApp2\\Program.cs",
+              "RelativeToolTip": "ConsoleApp2\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T06:24:32.271Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

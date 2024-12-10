@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\alapok\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AECBC1D6-85AD-4AFE-9E4A-6D1038C02954}|alapok\\alapok.csproj|c:\\users\\meszarosleventenorbe\\oszt\u00E1ly\\12d\\vics\u00E1pi levente\\c#\\alapok\\alapok\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AECBC1D6-85AD-4AFE-9E4A-6D1038C02954}|alapok\\alapok.csproj|solutionrelative:alapok\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\alapok\\alapok\\Program.cs",
+              "RelativeDocumentMoniker": "alapok\\Program.cs",
+              "ToolTip": "C:\\Users\\MeszarosLeventeNorbe\\oszt\u00E1ly\\12D\\Vics\u00E1pi Levente\\C#\\alapok\\alapok\\Program.cs",
+              "RelativeToolTip": "alapok\\Program.cs",
+              "ViewState": "AQIAAPUAAAAAAAAAAAAIwP8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T12:54:59.84Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

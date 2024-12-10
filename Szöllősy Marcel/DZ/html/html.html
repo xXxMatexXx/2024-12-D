@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szöveg Kiíró Weboldal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #005004;
+        }
+        .container {
+            background-color: #005004;
+            border: 1px solid #000000;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            opacity: 100;
+            text-align: center;
+            
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #36c000;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #36c000;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #005004;
+            border: 1px solid #005004;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Írj be egy szöveget:</h1>
+        <input type="text" id="textInput" placeholder="Írj ide valamit...">
+        <button onclick="displayText()">Megjelenítés</button>
+        <div id="textOutput" class="output"></div>
+    </div>
+
+    <script>
+        function displayText() {
+            var userInput = document.getElementById('textInput').value;
+            document.getElementById('textOutput').innerText = userInput;
+        }
+    </script>
+</body>
+</html>

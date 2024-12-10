@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doga gyakorlás</title>
+    <!-- CSS import -->
+    <link rel="stylesheet" href="jdf1.css">
+</head>
+<body>
+
+    <h1> itt van egy nagyon rosszúl összehányt megoldás az 5 dolgozatra felkészítő feladatra!</h1>
+
+    <!-- 1. Feladat: Készíts egy HTML űrlapot, amely egy név mezőt tartalmaz. A felhasználó beírhatja a
+    nevét, és ha rákattint egy gombra, a JavaScript kiírja a képernyőre, hogy „Helló, [név]!”. -->
+    <div>
+        <input id="inputMezo" type="text" placeholder="Nevet írj be légyszi">
+        <button id="helloGomb">Köszönés</button>
+        <p id="helloInputNev"></p>
+    </div>
+    <!-- 2.Feladat: Készíts egy weboldalt, amely egy szöveget tartalmaz, és egy gombot. A gombra kattintva
+    a szöveg színe változzon pirosra. -->
+    <div>
+        <button id="festoGomb">Fesd pirosra!</button>
+        <p id="festeniValoSzoveg" style="background-color: white;">oioioi</p>
+    </div>
+    <!-- 3. Feladat: Hozz létre egy gombot, amelyre kattintva egy JavaScript számláló növekszik, és kiírja,
+    hogy hányszor kattintottak rá.-->
+    <div>
+        <button id="szamlaloGomb">+1!</button>
+        <p id="szamlalo">0</p>
+    </div>
+    <!-- 4. Feladat: Készíts egy HTML oldalt, ahol a felhasználó egy szövegbeviteli mezőbe új listaelemeket
+    írhat, majd egy gomb segítségével hozzáadhatja őket egy meglévő listához.-->
+    <div>
+        <input id="listaInput" type="text" placeholder="Írj be bármit">
+        <button id="listaHozzaad">Hozzáadás</button>
+        <ul id="lista">
+
+        </ul>
+    </div>
+    <!-- 5. Feladat: Készíts egy oldalt, ahol van egy szövegrész, ami alapértelmezetten rejtve van, és csak
+    akkor jelenik meg, ha a felhasználó rákattint egy „Mutasd” gombra.-->
+    <div>
+        <button id="elohozoGomb">Mutasd!</button>
+        <br>
+        <p id="rejtettSzoveg" style="display: none;">ITT VOK!</p>
+    </div>
+</body>
+</html>
+<!-- JavaScript import -->
+<!-- HA BÁRMILYEN KREÁLÁST AKARSZ PL A LISTÁS FELADAT
+EZ NE A BODY UTÁN HANEM A HTML UTÁN LEGYEN MERT EGY FOS AZ EZ HAMARABB TÖLT BE! MINT MAGA AZ OLDAL! -->
+<script src="jdf1.js"></script>

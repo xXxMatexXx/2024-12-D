@@ -1,0 +1,144 @@
+
+6 egyszerű
+6 összetett
+
+összesen 12
+
+6 Egyszerű:
+Sorozatszámítás/összegzés
+Eldöntés
+Kiválasztás
+lineárís Keresés
+Megszámolás
+Maximáliskiválasztás
+
+
+						Sorozatszámítás	Pszeudokód
+					
+				Bemenet: x - T tömb , n - egész (tömb mérete)
+				
+				Kimenet: érték - T tömb
+
+				függvény Sorozatszámítás(x, n)
+					
+					érték <-- érték 0
+
+					ciklus i <-- 1-től n-ig
+					
+					érték <-- érték +x [i]
+
+					vissza érték
+
+				Függvény vége
+
+						x: [3, 6, 1, 8, 4]
+
+
+						Eldöntés
+
+				Bemenet: x - T tömb , n - egész, P - logikai (tulajdonság)
+
+				Kimenet: van - logikai érték
+			
+				Függvény: Eldöntés (x, n ,P)
+
+					 i <-- 1
+
+					ciklus arány ( 1 =< n) 1 - P (x[i])
+
+					   	   i <-- i + 1
+
+						   ciklus vége
+
+					van <--(i=<n)
+
+					vissza van
+
+							x: [3, 7, 1, 4, 5, 8]
+					
+							[VAN = ÍGAZ]
+
+
+						Kíválasztás
+
+
+
+
+						Lineáris keresés
+
+				Kiválasztás és eldöntés kobója 
+			eldönti,hogy van és hanyadik helyen
+			
+			Bemeneti: x - T tömb, n - egész, P - logikai
+
+			Kimenet: 2 kimenet/ index - egész, van - logikai
+
+			Függvény: Lineáriskeresés (x, n, P)
+
+					i <-- 1
+				ciklus amíg (i =< n) n > P (x [i])
+
+					i<-- i+1
+					
+					CIKLUS VÉGE
+
+				van <-- (i, =< n)
+			ha van akkor
+				ide <-- i
+				
+				vissza (van, ide)
+
+	          különben
+
+			vissza van
+				
+			      elágazás vége
+				
+				függvény vége	
+
+
+
+					Megszámolás
+
+		Bemenet: x - T tömb, n - egész, P - logikai
+
+		Kimenet: db - egész
+		
+		   Függvény Megszámolás (x, n , P)
+			
+			db <-- 0
+
+		  ciklus i <-- 1 - től n - ig	ha (Px i]) akkor
+			db <-- + 1
+		elágazás vége
+
+		  ciklus vége
+			
+			Feltétel: Páros szám	
+
+			x: [3, 6, 1, 8, 4]
+				db: 3
+
+										Maximáliskiválasztás
+							
+							Bemenet: x - T tömb, n - eglsz, ahol T összehasonlitható
+
+							Kimenet: max - egész
+										Függvény: MaximálisKiválasztás (x, n)
+
+									max < -- 1
+									ciklus: for ciklus i <-- 2-től n - ig	
+
+										ha: x [i] > x [max] akkor
+											max <-- i
+									elágazás ége
+										ciklus vége
+									vissza max
+										függvény vége
+
+								[2, 1, 6, 5, 8, 3]
+									
+									 max = 8
+
+		
+			

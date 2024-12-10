@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js Komponensalapú fejlesztés</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+  strong {
+    color: #020502;
+  }
+</style>
+</head>
+<body style="background: linear-gradient(to top, #64ed4c, #86fe7b);">
+  <div id="app">    
+    <!-- A szülő komponens, amely tartalmazza a gyermek komponenst -->
+    <greeting-component :message="greetingMessage"></greeting-component>
+    <button @click="changeMessage">Üzenet változtatása</button>
+    <button @click="sex">szeretettttttt</button>
+  </div>
+  <br><br>
+  <script>
+    // Gyermek komponens létrehozása
+    Vue.component('greeting-component', {
+      props: ['message'], // A prop-on keresztül átadott adat fogadása
+      template: '<h1>{{ message }}</h1>' // A message változó megjelenítése
+    });
+
+    // Szülő komponens létrehozása (a Vue instance)
+    new Vue({
+      el: '#app',
+      data: {
+        greetingMessage: 'Üdvözlet a Vue.js világában!' // Kezdeti üzenet
+      },
+      methods: {
+        changeMessage() {
+          this.greetingMessage = 'Az üzenet megváltozott!'; // Új üzenet beállítása
+        },
+        sex() {
+          this.greetingMessage = 'skész!'; // Új üzenet beállítása
+        }
+      }
+    });
+  </script>
+
+<hr><br>
+<h1>Vue.js kód magyarázata</h1>
+<ul>
+  <li>
+    <strong>1. HTML betöltése:</strong> A böngésző elkezdi olvasni a HTML dokumentumot, és betölti a <code>head</code> szekciót, amely tartalmazza a Vue.js könyvtárat egy CDN-ből.
+  </li>
+  <li>
+    <strong>2. Vue.js könyvtár betöltése:</strong> A <code>&lt;script src="https://cdn.jsdelivr.net/npm/vue@2"&gt;&lt;/script&gt;</code> link révén a Vue.js könyvtár betöltődik az oldalra, ami szükséges a Vue komponensek és az alkalmazás működéséhez.
+  </li>
+  <li>
+    <strong>3. <code>#app</code> div betöltése:</strong> A böngésző eléri a <code>&lt;div id="app"&gt;</code> elemet, ami a Vue alkalmazás gyökéreleme. Ezen belül található a <code>greeting-component</code> elem és egy gomb.
+  </li>
+  <li>
+    <strong>4. Vue komponens létrehozása:</strong> A <code>Vue.component('greeting-component', {...})</code> segítségével létrejön egy gyermek komponens, amely egy <code>message</code> nevű propot vár, és egy <code>&lt;h1&gt;</code> elemben megjeleníti azt.
+  </li>
+  <li>
+    <strong>5. Vue instance inicializálása:</strong> Az új Vue instance (<code>new Vue({ ... })</code>) létrejön, amely az <code>#app</code> elemhez van kötve. Az instance <code>data</code> objektuma tartalmazza a <code>greetingMessage</code> változót, amelynek kezdeti értéke *"Üdvözlet a Vue.js világában!"*. Az <code>methods</code> objektumban meghatározott <code>changeMessage</code> metódus lehetővé teszi az üzenet módosítását.
+  </li>
+  <li>
+    <strong>6. Komponens megjelenítése:</strong> A <code>greeting-component</code> a <code>:message="greetingMessage"</code> segítségével megkapja a <code>greetingMessage</code> változót, amely propként kerül átadásra. A gyermek komponens megjeleníti az üzenetet egy <code>&lt;h1&gt;</code> elemben.
+  </li>
+  <li>
+    <strong>7. Felhasználói interakció:</strong> Amikor a felhasználó rákattint a "Üzenet változtatása" gombra, a <code>@click="changeMessage"</code> esemény meghívja a <code>changeMessage()</code> metódust. A metódus futtatása megváltoztatja a <code>greetingMessage</code> változó értékét az új szövegre: *"Az üzenet megváltozott!"*.
+  </li>
+  <li>
+    <strong>8. DOM frissítése:</strong> A Vue.js figyeli a <code>greetingMessage</code> változását. Amikor az új értéket észleli, automatikusan frissíti a <code>greeting-component</code>-et, és a megjelenített üzenet azonnal megváltozik a DOM-ban.
+  </li>
+</ul>
+</body>
+</html>
+
+

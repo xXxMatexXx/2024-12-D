@@ -1,0 +1,304 @@
+using System;
+using System.Linq;
+namespace fügvények
+
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            int[] szamok = { 2, 4, 1, 6, 5, 3 };
+            int oszeg = 0;
+
+            //       foreach (int i in szamok) { 
+            //           oszeg  = oszeg + i;
+            //       }
+
+            /*           for (int i = 0; i < szamok.Length; i++)
+                       {
+                           oszeg += szamok[i];
+                    }
+            */
+
+            /*
+            int index = 0;
+
+            while (szamok.Length > index)
+            {
+                oszeg = oszeg + szamok[index];
+                index = index + 1;
+            }
+
+            Console.WriteLine(oszeg);
+            oszeg = szamok.Sum();
+            Console.WriteLine(oszeg);
+
+            */
+            /*
+            int[] szamok = { 2, 4, 1, 6, 5, 3 };
+            int oszeg = 0;
+            int index = 0;
+            bool van = false;
+            while (index < szamok.Length && van == false) {
+                if (szamok[index] % 2 != 0)
+                {
+                    van = true;
+                    index++;
+                    
+                }
+                else { 
+                index++;
+                }
+
+
+            } 
+            if (van) Console.WriteLine("van");
+            else Console.WriteLine("nincs");
+            */
+            // kiválasztás
+            /*
+            int[] szamok = { 2, 4, 1, 6, 5, 3 };
+          
+            int index = 0;
+            bool van = false;
+            while (index < szamok.Length && van == false)
+            {
+                if (szamok[index] % 2 != 0)
+                {
+                    van = true;
+                    
+
+                }
+                else
+                {
+                    index++;
+                }
+
+
+              ____________________________________________________
+              |                                                  |
+              |                                                  | 
+              |                                                  |
+              |                         ___                      |
+              |                       /     \ _________          |
+              |                       |     | _________          |
+              |                        \___/                     |
+              |                                                  |
+              |                                                  |
+              |__________________________________________________|
+                
+                
+
+
+            }
+            Console.WriteLine(index + 1 + " edik elem");
+            */
+            /*
+            //Lineáris keresés
+            int[] szamok = { 2, 4, 1, 6, 5, 3 };
+           int i = 0;
+            while (i < szamok.Length && szamok[i] % 2 == 0 ) {
+                i++;
+
+            
+            }
+
+            bool van = i < szamok.Length;
+            int idx = i + 1;
+            if (van) Console.WriteLine($"{van} {idx}");
+
+            else Console.WriteLine(van);
+            *//*
+               * Megszámlálás
+            int[] szamok = { 2, 4, 1, 6, 5, 3 };
+            int db = 0;
+
+            for (int i = 0; i < szamok.Length; i++)
+            {
+
+                if (szamok[i] % 2 == 0) {
+                    db++;
+                
+                }
+            }
+
+            Console.WriteLine(db);
+            *//*
+               * 
+               * max fügvény
+            int[] szamok = { 2, 4, 1, 6, 5, 3 };
+            int max = szamok[0];
+
+            for (int i = 1; i < szamok.Length; i++)
+
+            {
+                if (szamok[i] > max) { 
+                 max = szamok[i];
+                }
+            }
+
+            Console.WriteLine(max);
+            */
+           // int[] szamok = { 12, 6, 25, 2, 54, 23, 84, 20, 18, 9 };
+            // Feladatok
+            //Menyi háromal osztható szám
+            // Hol található benne az elsó páratlan
+            /*
+            int db = 0;
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i] % 3 == 0)
+                {
+                    db++;
+                }
+            }
+            Console.WriteLine(db);
+           
+            int j = 0;
+            bool elso_megvan = false;
+           
+            while (j < szamok.Length && elso_megvan == false)
+            {
+                if (szamok[j] % 2 != 0)
+                {
+                    Console.WriteLine(j + 1 + " Edik elem az első páratlan");
+                    elso_megvan = true;
+                } else
+                {
+                    j++;
+                }
+               
+
+            }
+            if (elso_megvan == false)
+            {
+              Console.WriteLine("Nincs Páratlan szám");
+            }
+          bool   nincs_oszthato = true;
+            int T = 0;
+            
+            while (T < szamok.Length && nincs_oszthato )
+            {
+                if (szamok[T] % 3 == 0 && szamok[T] % 5 == 0)
+                {
+                    nincs_oszthato = false;
+                    Console.WriteLine("Van ötel és háromal osztható");
+                }
+                else { 
+                T++;
+                    
+                }
+            }
+            if (nincs_oszthato)
+            {
+                Console.WriteLine("Nincs 5 tel és 3 mal osztható szám");
+            }
+            
+            int min = szamok[0];
+            for (int k = 1; k < szamok.Length; k++)
+            {
+                if (szamok[k] < min)
+                {
+                    min = szamok[k];
+                }
+            }
+            Console.WriteLine(min + "a Legkisebb elem");
+            // vagy   Console.WriteLine(szamok.Min()); lol
+
+            //A Felhasználó megad egy számot. A program, megnézi , hogy
+            // Ez a szám megtalálható-e tömbben. Ha igen hol
+            Console.WriteLine("Számot kérek");
+            int bekert = int.Parse(Console.ReadLine());
+            int z = 0;
+            bool nincs = true;
+            while (z < szamok.Length && nincs )
+            {
+                if (bekert == szamok[z])
+                {
+                    nincs = false;
+                }
+                else { 
+                    z++;
+                }
+                
+            }
+            
+            if (nincs) Console.WriteLine("Nem volt ijen szám");
+            else Console.WriteLine(z + 1 + " edik helyen volt ijen szám");
+            System.Diagnostics.Process.Start("notepad");
+            */
+            int[] szamok = { 12, 6, 25, 2, 54, 23, 84, 20, 18, 9 };
+            int sum = 0;
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i] % 2 != 0)
+                {
+                    sum = sum + szamok[i];
+
+                    
+                    
+                }
+
+
+           
+            }
+            Console.WriteLine("A páratlan számok összege: "  +  sum);
+              int min = szamok[0];
+            int max = szamok[0];
+            foreach (int i in szamok) {
+                if (i > max)
+                {
+                    max = i;
+                } else if (min > i) {
+                    min = i;
+                }
+
+            
+            }
+            Console.WriteLine("A legkisebb és a legnagyobb közti különbség: " + (max - min));
+            Console.WriteLine("számot!");
+            int bekert = int.Parse(Console.ReadLine());
+            for (int i = 0; i < szamok.Length; i++)  {
+                
+                szamok[i] = szamok[i] * bekert;
+               Console.WriteLine(szamok[i]);
+
+            }
+            // int[] masik_szamok = { 12, 6, 25, 2, 54, 23, 84, 20, 18, 9 }; ha kell
+            int the_13 = szamok[0];
+            bool van_13 = false;
+            int j = 0;
+            while (j < szamok.Length && !van_13) {
+                if (szamok[j] % 3 == 0 && szamok[j] % 10 == 0)
+                {
+                    the_13 = szamok[j];
+                    van_13 = true;
+                }
+                else { 
+                    j++;
+                }
+
+
+            }
+
+            if (van_13)
+            {
+                Console.WriteLine("Kisebb számok:");
+                foreach (int item in szamok)
+                {
+                    if (item < the_13)
+                    {
+                        Console.WriteLine(item);
+                    }
+
+                }
+            }
+            else {
+                Console.WriteLine("Nincs");
+                    }
+
+        }
+       
+    }
+}

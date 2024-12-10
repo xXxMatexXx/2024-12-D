@@ -1,0 +1,26 @@
+div {
+    background-color: red;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    font-size: 50px;
+    width: 300px;
+    position: relative;
+    margin: 20px auto auto auto;
+    color: white;
+}
+
+button {
+    background-color: darkred;
+    color: white;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+input {
+    background-color: darkred;
+    color: white;
+}

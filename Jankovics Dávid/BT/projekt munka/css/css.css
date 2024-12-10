@@ -1,0 +1,86 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Spans the full width of the screen */
+    box-sizing: border-box; /* Ensures padding is within width */
+}
+.header img {
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-left: 200px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+.header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+}
+.sidebar {
+    width: 20%;
+    background-color: #f0e7e7;
+    padding: 0px;
+    
+}
+.main-content {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; /* Three columns: Empty, main (middle), reference */
+    padding: 0px;
+}
+.summary, .experience {
+    grid-column: 2 / 3; /* Summary and Experience in the middle column */
+    
+    
+}
+.reference {
+    grid-column: 3 / 4; /* References in the right column */
+    margin-left: 200px;
+    width: 20%;
+}
+.contact, .education {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.contact h2, .education h2 {
+    margin-top: 0;
+}
+.summary, .experience {
+    margin-top: 20px;
+}
+.summary h2, .experience h2 {
+    margin-bottom: 10px;
+}
+.experience h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+.experience ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.reference {
+    margin-top: 20px;
+}
+.reference h2 {
+    margin-bottom: 10px;
+}

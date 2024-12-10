@@ -1,0 +1,15 @@
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.AssemblyInfoInputs.cache
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.AssemblyInfo.cs
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.csproj.CoreCompileInputs.cache
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.sourcelink.json
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\bin\Debug\net6.0\algoritmus.exe
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\bin\Debug\net6.0\algoritmus.deps.json
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\bin\Debug\net6.0\algoritmus.runtimeconfig.json
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\bin\Debug\net6.0\algoritmus.dll
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\bin\Debug\net6.0\algoritmus.pdb
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.dll
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\refint\algoritmus.dll
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.pdb
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\algoritmus.genruntimeconfig.cache
+C:\Users\Kiss-FodorZsombor\Desktop\asd\12D\Kiss Fodor Zsombor\Csharp\algoritmus\algoritmus\obj\Debug\net6.0\ref\algoritmus.dll

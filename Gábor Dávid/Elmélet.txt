@@ -1,0 +1,115 @@
+Programozási tételek
+
+Egyszerű:
+ - Sorozatszámítás / összegzés
+ - Eldöntés
+ - Kiválasztás
+ - Lineáris keresés
+ - Megszámlálás
+ - Maximum / Minimum kiválasztás
+
+1, Sorozatszámítás / Összegzés       Pszeudókód
+
+	Bement: x - T tömb
+		n - egész (tömb mérete)
+	
+	Kimenet: érték - T
+
+	függvény  Sorozatszámítás(x, n)
+		érték <-- érték0
+		ciklus i <-- 1-től n-ig
+			érték <-- érték + x[i]
+		ciklus vége
+		visszatérési érték
+	függvény vége
+
+2, Eldöntés
+	
+	Bemenet: x - T tömb
+		 n - egész (tömb mérete)
+		 P - logikai (tulajdonság)
+
+	Kimenet: van - logikaiérték (true/false)
+	
+	függvény Eldöntés(x, n, P)
+		i <-- 1
+		ciklus amíg(i=<) && P(x[i])
+			i <-- i + 1     ( inkrementálás )
+		ciklus vége
+		van <--(i =< n)
+		visszatérési érték = van
+	függvény vége
+
+3, Kiválasztás
+
+	Bemenet: x - T tömb
+		 n - egész (tömb mérete)
+		 P - logikai (tulajdonság)
+
+	Kimenet: index - egész (true/false)
+	
+	függvény Kiválasztás(x, n, P)
+		i <-- 1
+		ciklus amíg(i=<n) && P(x[i])
+			i <-- i + 1     ( inkrementálás )
+		ciklus vége
+		index <-- i
+		visszatérési érték = index
+	függvény vége
+
+4, Lineáris keresés
+
+	Bemenet: x - T tömb
+		 n - egész (tömb mérete)
+		 P - logikai (tulajdonság)
+
+	Kimenet: index - egész (true/false)
+
+	függvény LineárisKeresés(x, n, P)
+		i <-- 1
+		ciklus amíg(i=<n) && P(x[i])
+			i <-- i + 1      ( inkremántálás )
+		ciklus vége
+		true <- (i=<n)
+		,ha igaz akkor
+		   index <- i
+      		   visszatérési érték (igaz, index)
+		különben
+		   visszatérési érték (false)
+		elágazás vége
+	függvény vége
+
+5, Megszámlálás
+	
+	Bemenet: x - T tömb
+		 n - egész (tömb mérete)
+		 P - logikai (tulajdonság)
+
+	Kimenet: db - egész (darabszám)
+
+	függvény Megszámlálás(x, n, P)
+		db <-- 0
+		ciklus i <-- 1-től n-ig
+			ha P(x[i]) akkor
+			  db <-- db + 1
+			elagazás vége
+		ciklus vége
+		visszatérési érték = db
+	függvény vége
+
+6, Maximum kiválasztás
+
+	Bemenet: x - T tömb
+		 n - egész, ahol T összehasonlítható
+
+	Kimenet: max - egész
+
+	függvény MaximumKiválasztás(x, n)
+		max <-- 1
+		ciklus i <-- 2-től n-ig
+			ha x[i] > x[max], akkor
+			  max <-- i
+			elágazás vége
+		ciklus vége
+		visszatérési érték = maximum
+	függvény vége

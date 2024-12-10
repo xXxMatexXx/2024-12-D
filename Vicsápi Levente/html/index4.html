@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vue.js - Props és Gombnyomás Példa</title>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: linear-gradient(to right, #64b3f4, #c2e59c);
+
+padding: 20px;
+
+}
+
+.component-box {
+
+border: 2px solid #fff;
+
+padding: 15px;
+
+margin-bottom: 20px;
+
+background: #e6f7ff;
+
+border-radius: 10px;
+
+}
+
+h2 {
+
+color: #024e76;
+
+}
+
+button {
+
+padding: 10px;
+
+margin-top: 10px;
+
+background: #007bff;
+
+color: #fff;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+
+button:hover {
+
+background: #0056b3;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="app">
+
+<div class="component-box">
+
+<h2>Props bemutató</h2>
+
+<props-demo :message="message" :subtitle="subtitle" :subtitle2="subtitle2" :subtitle3="subtitle3"></props-demo>
+
+<button @click="changeMessage">Szöveg megváltoztatása</button>
+<button @click="changeSubtitle">Szöveg megváltoztatása2</button>
+<button @click="changeSubtitle2">Szöveg megváltoztatása3</button>
+<button @click="showadditionalMessage">Szöveg megváltoztatása4</button>
+
+<div v-if="additionalMessage">
+    <h3>{{ additionalMessage }}</h3>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// props komponens
+
+Vue.component('props-demo', {props: ['message', 'subtitle', 'subtitle2', 'subtitle3'],template: ` <div><h3>{{ message }}</h3><p>{{ subtitle }}</p><p>{{ subtitle2 }}</p><p>{{ subtitle3 }}</p></div>`});
+
+// Szülő Vue instance
+
+new Vue({
+
+el: '#app',
+
+data: {
+
+message: '',
+subtitle: '',
+subtitle2: '',
+subtitle3: '',
+additionalMessage: ''
+
+},
+
+methods: {
+
+changeMessage() {
+
+this.message = 'Ez az új üzenet gombnyomás után!';
+
+},
+
+changeSubtitle(){
+    this.subtitle = 'Itt mindenki Kawaii!';
+},
+
+changeSubtitle2(){
+    this.subtitle2 = 'Szeretek mindenkit!';
+},
+
+changeSubtitle3(){
+    this.subtitle3 = 'Anyád!';
+},
+
+showadditionalMessage(){
+    this.additionalMessage = "Viszlát!"
+}
+
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>

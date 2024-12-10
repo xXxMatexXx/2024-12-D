@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vue.js - Props és Gombnyomás Példa</title>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: linear-gradient(to right, #64b3f4, #c2e59c);
+
+padding: 20px;
+
+}
+
+
+.component-box {
+
+border: 2px solid #fff;
+
+padding: 15px;
+
+font-size: large;
+
+margin-bottom: 20px;
+
+background: #e6f7ff;
+
+border-radius: 10px;
+
+}
+
+h2 {
+
+color: #024e76;
+
+}
+
+button {
+
+padding: 10px;
+
+margin-top: 10px;
+
+background: #007bff;
+
+color: #fff;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+
+button:hover {
+
+background: #0056b3;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="app">
+
+<div class="component-box">
+
+<h2>Props bemutató</h2>
+
+<props-demo :message="message" :Message1="Message1" :Message2="Message2" :Message3="Message3" :Message4="Message4" :Message5="Message5" :Message6="Message6"></props-demo>
+
+<button @click="changeMessage">Szöveg1</button>
+<button @click="changeMessage1">Szöveg2</button>
+<button @click="changeMessage2">Szöveg3</button>
+<button @click="changeMessage3">Szöveg4</button>
+<button @click="changeMessage4">Szöveg5</button>
+<button @click="changeMessage5">Szöveg6</button>
+<button @click="changeMessage6">Szöveg7</button>
+
+<button @click="showAdditionalMessage1">ah</button>
+<button @click="showAdditionalMessage2">ahh</button>
+<button @click="showAdditionalMessage3">ahhh</button>
+<button @click="showAdditionalMessage4">ahhhh</button>
+<button @click="showAdditionalMessage5">ahhhhh</button>
+<button @click="showAdditionalMessage6">ahhhhhh</button>
+<button @click="showAdditionalMessage7">ahhhhhhh</button>
+<button @click="showAdditionalMessage8">ahhhhhhhh</button>
+
+<div v-if="AdditionalMessage1" class="component-box">
+    <h1>{{ AdditionalMessage1 }}</h1>
+</div>
+<div v-if="AdditionalMessage2" class="component-box">
+    <h1>{{ AdditionalMessage2 }}</h1>
+</div>
+<div v-if="AdditionalMessage3" class="component-box">
+    <h1>{{ AdditionalMessage3 }}</h1>
+</div>
+<div v-if="AdditionalMessage4" class="component-box">
+    <h1>{{ AdditionalMessage4 }}</h1>
+</div>
+<div v-if="AdditionalMessage5" class="component-box">
+    <h1>{{ AdditionalMessage5 }}</h1>
+</div>
+<div v-if="AdditionalMessage6" class="component-box">
+    <h1>{{ AdditionalMessage6 }}</h1>
+</div>
+<div v-if="AdditionalMessage7" class="component-box">
+    <h1>{{ AdditionalMessage7 }}</h1>
+</div>
+<div v-if="AdditionalMessage8" class="component-box">
+    <h1>{{ AdditionalMessage8 }}</h1>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<script>
+
+// props komponens
+
+Vue.component('props-demo', {props: ['message', 'Message1', 'Message2', 'Message3', 'Message4', 'Message5', 'Message6'],
+template: `
+ <div>
+    <h3>{{ message }}</h3>
+    <p>{{ Message1 }}</p>
+    <p>{{ Message2 }}</p>
+    <p>{{ Message3 }}</p>
+    <p>{{ Message4 }}</p>
+    <p>{{ Message5 }}</p>
+    <p>{{ Message6 }}</p>
+</div>
+`
+});
+
+
+
+
+// Szülő Vue instance
+
+new Vue({
+
+el: '#app',
+
+data: {
+
+message: '',
+Message1: '',
+Message2: '',
+Message3: '',
+Message4: '',
+Message5: '',
+Message6: '',
+additionalMessage1: '',
+additionalMessage2: '',
+additionalMessage3: '',
+additionalMessage4: '',
+additionalMessage5: '',
+additionalMessage6: '',
+additionalMessage7: '',
+additionalMessage8: ''
+},
+
+methods: {
+
+changeMessage() {
+
+this.message = 'I';
+
+},
+
+changeMessage1() {
+
+this.Message1 = 'THINK';
+
+},
+
+changeMessage2() {
+
+this.Message2 = 'YOU';
+
+},
+
+changeMessage3() {
+
+this.Message3 = 'SHOULD';
+
+},
+
+changeMessage4() {
+
+this.Message4 = 'KILL';
+
+},
+
+changeMessage5() {
+
+this.Message5 = 'YOURSELF';
+
+},
+
+changeMessage6() {
+
+this.Message6 = 'NOW';
+
+},
+
+showAdditionalMessage1(){
+    this.additionalMessage1 = "I"
+},
+
+showAdditionalMessage2(){
+    this.additionalMessage2 = "REALLY"
+},
+
+showAdditionalMessage3(){
+    this.additionalMessage3 = "THINK"
+},
+
+showAdditionalMessage4(){
+    this.additionalMessage4 = "YOU"
+},
+
+showAdditionalMessage5(){
+    this.additionalMessage5 = "SHOULD"
+},
+
+showAdditionalMessage6(){
+    this.additionalMessage6 = "KILL"
+},
+
+showAdditionalMessage7(){
+    this.additionalMessage7 = "YOURSELF"
+},
+
+showAdditionalMessage8(){
+    this.additionalMessage8 = "NOW"
+}
+
+
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>

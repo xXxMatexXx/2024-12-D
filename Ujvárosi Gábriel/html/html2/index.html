@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+<label for="name">Név</label>
+        
+<input v-model="name" type="text" id="name" placeholder="Add meg a neved">
+
+<label for="age">Kor</label>
+<input v-model="age" type="number" id="age" placeholder="Add meg a korod">
+
+<p><strong>Név:</strong> {{ name }}</p>
+<p><strong>Kor:</strong> {{ age }}</p>
+
+
+<p>{{ ageStatus }}</p>
+
+<div v-if="age >= 18">
+    <p>Gratulálok felnőtt vagy, fizethetc kapu adót</p>
+</div>
+
+<h3>Kedvenc hobbik:</h3>
+<ul>
+    <li v-for="(hobby, index) in hobbies" :key="index">{{ hobby }}</li>
+    <greeting-component :message="greeting_message"></greeting-component>
+    <button @click="messageChanger">üzenet változtatása</button>
+</ul>
+<video src="./Messenger_creation_1705084780432093.mp4" controls></video>
+
+    </div>
+<script>
+
+Vue.component('greeting-component', {
+    props:['message'], 
+    template: '<h1>{{ message }}</h1>' 
+})
+
+
+new Vue({
+
+
+
+    el: '#app',
+
+    data: {
+        greeting_message: "üdvözölek",
+        name: '',
+        
+        age: '',
+        hobbies: ['Futás', 'Olvasás', 'Kerékpározás']
+    },
+    computed: {
+        ageStatus() {
+            if (this.age >= 18) {
+                return 'Felnőtt'
+            } else if (this.age) {
+                return 'Kiskorú'
+            } else {
+                return
+            }
+
+
+        
+            
+
+        
+      
+       
+
+    },
+    
+},
+methods: {
+    messageChanger() {
+        this.greeting_message = "Nem vagy üdvözölve"
+    }
+        }
+
+    })
+//http://tibor.brownie.infora.hu/
+
+</script>
+
+</body>
+
+
+</html>

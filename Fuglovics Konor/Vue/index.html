@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/theme.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<div class="component-box">
+			<h2>Props bemutató</h2>
+			<props-demo :message="message" :subtitle="subtitle"></props-demo>
+			<button @click="changeSubtitle">Change subtitle</button>
+			<button @click="changeMessage">Change text</button>
+			<button @click="changeMessage2">Change text again</button>
+			<button @click="changeMessage3">Change text yet again</button>
+			<button @click="showAdditionalMessage">Show additional message</button>
+			<div v-if="additionalMessage" class="component-box">
+				<h3>{{ additionalMessage }}</h3>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
