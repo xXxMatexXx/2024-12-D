@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Gyümölcsök Listája</h1>
+        <ul>
+            <li v-for="(item, index) in items" :key="index">
+                {{ index + 1 }}. {{ item }}
+            </li>
+        </ul>
+        <input type="text" v-model="newItem" placeholder="Új lista elem">
+        <button @click="addItem">Mező +</button> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    items: ["Alma", "Banán", "Narancs", "Szőlő"],
+                    newItem: ""
+                };
+            },
+            methods: {
+                addItem() {
+                    if (this.newItem) {
+                        this.items.push(this.newItem);
+                        this.newItem = "";
+                    }
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
