@@ -10,3 +10,5 @@ sigma rizz gyatt skibidi
 
 
 [Ezt Gabi írta úgy hogy baszunk?](https://katonaszg-my.sharepoint.com/:u:/g/personal/gabriel_uivarosi_katonaj-mkszig_hu/EU2M_yo42W5KrhCFqAyTxBcBLWmGvgYSjg8GDK0xrgm9tQ?e=7suG3V)
+
+[subszkrib náo](https://youtube.com/TheSoundCrafterCompany)
