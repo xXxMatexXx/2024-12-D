@@ -1,0 +1,16 @@
+int - Csak egész számokra van megadva
+
+string - betűk, számok megadása a számokat is betüként vesszi, akármenyit képes tárolni
+
+char - csak 1 dolgot tud tárolna
+
+for - végig megy a tömbön és megnézni van e 3 osztható szám
+
+if - valahanyadik elem osztható 3 mal nem
+
+bool - logikai változó elején FALSE
+
+while - inkrement létrehozás kell
+! van e benne = false
+
+lineáris keresés - kiválasztás és eldöntés egyben

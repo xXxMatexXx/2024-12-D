@@ -1,0 +1,131 @@
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            int [] szamok = { 1, 2, 5, 8, 16, 32, 41,};
+
+            int osszeg = 0;
+
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                osszeg += szamok[i];
+            }
+
+            Console.WriteLine($"a számok összege {osszeg}");
+            */
+            /*
+            List<string> list = new List<string> {"Karcsi"};
+
+            Console.WriteLine (string.Join(",", list));
+            */
+
+            /*
+            int[] szamok = { 1, 2, 3, };
+
+            Console.WriteLine("Add meg a keresett számot:");
+            int keresetszam = int.Parse(Console.ReadLine());
+
+            bool talalat = false;
+            foreach (int szam in szamok)
+            {
+                if  (szam == keresetszam)
+                    {
+                        talalat = true;
+                        break;
+                    }
+            }
+            Console.WriteLine(talalat? "A szám megtalálható": "A szám nem található meg");
+            */
+
+            /*
+            int[] szamok = {1, 2, 3, 6, 7 };
+
+            int osszeg = 0;
+
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                osszeg += szamok[i];
+            }
+
+            Console.WriteLine($"a számok {osszeg}");
+            */
+
+            /*
+            int[] tömb = { 1, 2, 3, };
+
+            int osszeg = 0;
+
+            for (int i = 0; i < tömb.Length; i++)
+            {
+                osszeg += tömb[i];
+            }
+            Console.WriteLine(osszeg);
+            */
+
+            /*
+            List<string> list = new List<string> {"Steve"};
+
+            Console.WriteLine (string.Join(",", list));
+            */
+
+            /*
+            int[] tomb = { 1, 2, 3, 4, 5, 6, };
+            Console.WriteLine("Add meg a keresett számot:");
+
+            int keresetszám = int.Parse(Console.ReadLine());
+
+            bool talalt = false;
+            foreach (int szam in tomb)
+            {
+                if (szam == keresetszám)
+                    talalt = true;
+            }
+            Console.WriteLine(talalt? "a szám benne van": "a szám nincs benne");
+            */
+
+            /*
+            int[] tomb = { 2, 5, 6, 13, 23 };
+            Console.WriteLine("Írd be a keresett számot:");
+            int kereso =int.Parse(Console.ReadLine());
+
+            bool talalt = false;
+            foreach (int i in tomb)
+            {
+                if (i == kereso)
+                    talalt = true;
+            }
+            Console.WriteLine(talalt? "a kereset szam benne van": "a kereset szám nincs benne");
+            */
+
+            /*
+            int[] szamok = { 1, 2, 3, 4, 5, 6, };
+            Console.WriteLine("Add meg a keresett számot:");
+            int kereso = int.Parse(Console.ReadLine());
+
+            bool kereset = false;
+            foreach (int SZ in szamok)
+            {
+                if (SZ == kereso)
+                    kereset = true;
+            }
+            Console.WriteLine(kereset? "A szám benne van": "A szám nincs benne");
+            */
+
+            int[] szamok = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            int parosszamok = 0;
+
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i] %2 == 0)
+                {
+                    parosszamok++;
+                }
+            }
+
+            Console.WriteLine($"Páros számok összesen {parosszamok}");
+
+        }
+    }
+}
