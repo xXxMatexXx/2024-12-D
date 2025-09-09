@@ -23,7 +23,7 @@ int nicolas1 = 80;
 int nicolas2 = 83;
 int nicolas3 = 82;
 int nicolas4 = 88;
-int nicolas5 = 85;
+int nicolas5 = 85; 
 
 int zahirah1 = 84;
 int zahirah2 = 96;
@@ -45,3 +45,33 @@ Console.WriteLine($"Nicolas\t {(nicolas1 + nicolas2 + nicolas3 + nicolas4 + nico
 Console.WriteLine($"zahirah\t {(zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5) /(decimal) currentAssignments}");
 
 Console.WriteLine($"Jeong\t {(jeong1 + jeong2 + jeong3 + jeong4 + jeong5) /(decimal) currentAssignments} ");
+
+
+
+
+
+string Student = ("Sophia Johnson");
+Console.WriteLine($"Student: {Student}\n");
+
+Console.WriteLine($"Course   \t\t Grade\t Credit Hours");
+Console.WriteLine("English 101  \t\t4\t\t 3");
+Console.WriteLine("Algebra 101 \t\t3\t\t 3");
+Console.WriteLine("Biology 101 \t\t3\t\t 4");
+Console.WriteLine("Computer Science I \t3\t\t 4\n");
+
+Console.WriteLine("Final GPA: ");
+
+int English = (4);
+int Algebra = (3);
+int Biology = (3);
+int Computer_Science = (3);
+int Psychology = (4);
+
+int Eng_C = (3);
+int Alg_C = (3);
+int Bio_C = (4);
+int Com_C = (4);
+int Psy_C = 3;
+
+decimal GPA =((English * Eng_C + Algebra * Alg_C + Biology * Bio_C + Computer_Science * Com_C + Psychology * Psy_C) / 17m );
+Console.WriteLine($"{GPA}");
