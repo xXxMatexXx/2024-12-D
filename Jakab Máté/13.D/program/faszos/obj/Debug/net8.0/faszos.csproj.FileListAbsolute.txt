@@ -1,0 +1,14 @@
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.AssemblyInfoInputs.cache
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.AssemblyInfo.cs
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.csproj.CoreCompileInputs.cache
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\bin\Debug\net8.0\faszos.exe
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\bin\Debug\net8.0\faszos.deps.json
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\bin\Debug\net8.0\faszos.runtimeconfig.json
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\bin\Debug\net8.0\faszos.dll
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\bin\Debug\net8.0\faszos.pdb
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.dll
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\refint\faszos.dll
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.pdb
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\faszos.genruntimeconfig.cache
+C:\Users\TEMP.AzureAD.001\Desktop\program\faszos\obj\Debug\net8.0\ref\faszos.dll
