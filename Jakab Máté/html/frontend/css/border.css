@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 25px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+  }
+
+
+.piros {
+    border-color: #f44336;
+    color: red;
+  }
+  
+  .piros:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  
+  .sarga {
+    border-color: #f0f321;
+    color: yellow
+  }
+  
+  .sarga:hover {
+    background: #ff9800;
+    color: white;
+  }
+  
+  .zold {
+    border-color: #2bff00;
+    color: green;
+  }
+  
+  .zold:hover {
+    background: #2bff00;
+    color: white;
+  }
+  
+  .lila {
+    border-color: #a515c2;
+    color: purple
+  }
+  
+  .lila:hover {
+    background: #c138d3;
+    color: white;
+  }
+  
+  .kek {
+    border-color: #1c63b4;
+    color: black;
+  }
+  
+  .kek:hover {
+    background: #2b0abe;
+  }
